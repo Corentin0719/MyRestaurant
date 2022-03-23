@@ -51,15 +51,22 @@
         android:id="@+id/iconItem"
         android:layout_width="152dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
         android:adjustViewBounds="true"
-        app:layout_constraintBottom_toTopOf="@+id/ListCategory"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/cartBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/cartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/cart" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

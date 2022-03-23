@@ -5,6 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
@@ -31,6 +34,13 @@ class MenuActivity : AppCompatActivity() {
         binding.ListCategory.adapter = CategoryAdapter(arrayListOf(),{})
 
         loadItemsFromServer(title)
+
+        val cartBtn = findViewById(R.id.cartBtn) as ImageView
+        // set on-click listener
+        cartBtn.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loadItemsFromServer(category : String) {
@@ -68,6 +78,7 @@ class MenuActivity : AppCompatActivity() {
         const val TITLE_KEY = "title"
         const val DETAILS_KEY = "details"
     }
+
 
 
 
