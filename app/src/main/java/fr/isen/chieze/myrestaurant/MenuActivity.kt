@@ -5,9 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
@@ -33,7 +31,7 @@ class MenuActivity : AppCompatActivity() {
         binding.ListCategory.layoutManager = LinearLayoutManager(this)
         binding.ListCategory.adapter = CategoryAdapter(arrayListOf(),{})
 
-        loadItemsFromServer(title)
+        fromServer(title)
 
         val cartBtn = findViewById(R.id.cartBtn) as ImageView
         // set on-click listener
@@ -43,7 +41,7 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadItemsFromServer(category : String) {
+    private fun fromServer(category : String) {
         val url = "http://test.api.catering.bluecodegames.com/menu"
         val obj = JSONObject()
         obj.put("id_shop", "1")
@@ -68,7 +66,7 @@ class MenuActivity : AppCompatActivity() {
 
             },
             { error ->
-                Log.d("MenuActivity", "Api call failed")
+                Log.d("MenuActivity", "La requête à échoué")
             }
         )
         queue.add(jsonObjectRequest)

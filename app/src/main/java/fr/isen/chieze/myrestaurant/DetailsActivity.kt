@@ -26,9 +26,6 @@ class DetailsActivity : AppCompatActivity() {
 
         binding.detailsFood.text = item.ingredients.joinToString(", ", transform = { it.name_fr })
 
-        Log.i("image", item.images.toString())
-        //binding.viewSilder.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        //binding.viewSilder.adapter = ViewAdapter(this,item.images)
 
     }
 }

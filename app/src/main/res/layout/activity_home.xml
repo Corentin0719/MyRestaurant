@@ -7,23 +7,19 @@
     android:background="@color/design_default_color_surface"
     tools:context=".HomeActivity">
 
+
     <TextView
         android:id="@+id/MenuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="24dp"
         android:text="@string/home_title"
         android:textSize="40sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/starterText"
@@ -68,10 +64,10 @@
         android:layout_width="152dp"
         android:layout_height="91dp"
         android:layout_marginStart="114dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="121dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MenuTitle"
         app:srcCompat="@drawable/home_picture" />

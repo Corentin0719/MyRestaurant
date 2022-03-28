@@ -32,14 +32,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    override fun onStop(){
-        super.onStop()
-        Log.d("HomeActivity","L'activité est arrêtée")
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("HomeActivity","L'activité est dértuite")
-    }
+
     private fun chooseCatergory(string: String) {
         val intent = Intent(this, MenuActivity::class.java)
         intent.putExtra(CATEGORY_KEY,string)
@@ -49,4 +42,12 @@ class HomeActivity : AppCompatActivity() {
         const val CATEGORY_KEY = "category"
     }
 
+    override fun onStop(){
+        super.onStop()
+        Log.d("HomeActivity","L'activité est arrêtée")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("HomeActivity","L'activité est dértuite")
+    }
 }

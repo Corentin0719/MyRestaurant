@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRestaurant"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CartActivity"></activity>
+        <activity
+            android:name=".testActivity"
+            android:exported="false" />
+        <activity android:name=".CartActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
